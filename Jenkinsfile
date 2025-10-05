@@ -28,8 +28,8 @@ pipeline{
             steps{
             	bat 'docker login -u %DOCKER_HUB_USR% -p %DOCKER_HUB_PSW%'
                 bat "docker push harshitbhadani/flightreservationtest:latest"
-                bat "docker tag harshitbhadani/flightreservationtest:latest harshitbhadani/flightreservationtest:%env.BUILD_NUMBER%"
-                bat "docker push harshitbhadani/flightreservationtest:%env.BUILD_NUMBER%"
+                bat "docker tag harshitbhadani/flightreservationtest:latest harshitbhadani/flightreservationtest:${env.BUILD_NUMBER}"
+                bat "docker push harshitbhadani/flightreservationtest:${env.BUILD_NUMBER}"
             }
         }
     }
