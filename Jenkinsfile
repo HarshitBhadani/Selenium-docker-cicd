@@ -20,18 +20,20 @@ pipeline{
         }
 
         stage('Push Docker Image'){
+        	environment{
+        		DOCKER_HUB = credentials('dockerhub-creds')
+        	}
             steps{
+            	bat 'docker login -u %DOCKER_HUB_USR% -p %DOCKER_HUB_PSW%'
                 bat "docker push harshitbhadani/flightreservationtest2 "
             }
         }
     }
 
     post{
-        success{
-            echo "build Success"
-        }
+        
         always{
-            echo "clean up"
+            bat "docker logout"
         }
     }
 
