@@ -42,7 +42,7 @@ public abstract class AbstractTest {
     	}else {
     		cap = new FirefoxOptions();
     	}
-    	return new RemoteWebDriver(new URL("http://192.168.1.9:4444/"),cap);
+    	return new RemoteWebDriver(new URL("http://192.168.1.8:4444/"),cap);
     	//return new RemoteWebDriver(new URL("http://selenium-grid:4444/wd/hub"),cap);
     }
 
