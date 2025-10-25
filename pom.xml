@@ -75,7 +75,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <browser>chrome</browser>
-                        <seleniumgridenabled>true</seleniumgridenabled>
+                        <seleniumgridenabled>false</seleniumgridenabled>
                     </systemPropertyVariables>
                     <suiteXmlFiles>
                         <file>src\test\resources\test-suites\flight-reservation.xml</file>
